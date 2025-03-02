@@ -1,19 +1,38 @@
 <template>
-  <div>
-    <nav>
-      <ul>
-        <li>
-          <NuxtLink to="/">Main</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/about">About</NuxtLink>
-        </li>
-      </ul>
-    </nav>
-    <slot />
+  <div class="container mx-auto max-w-2xl">
+    <header class="flex justify-between items-center mt-5">
+      <div>
+        <NuxtLink to="/" class="text-xl font-semibold p-2 hover:bg-gray-200">Benson</NuxtLink>
+      </div>
+      <Menu />
+    </header>
+    <main class="p-2">
+      <slot />
+    </main>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  // as a string,
+  // where `%s` is replaced with the title
+  titleTemplate: '%s - Benson',
+  link: [
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.googleapis.com',
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
+      crossorigin: '',
+    },
+  ],
+});
+</script>
 
-<style></style>
+<style>
+body {
+  font-family: 'Roboto';
+}
+</style>
