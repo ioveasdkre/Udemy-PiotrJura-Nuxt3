@@ -7,5 +7,10 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss'],
+
+  // 
+  colorMode: {
+    classSuffix: '',
+  },
 });
