@@ -9,6 +9,9 @@
           <NuxtLink to="/about" class="link">About</NuxtLink>
         </li>
         <li>
+          <NuxtLink to="/about-ch06" class="link">About Ch06</NuxtLink>
+        </li>
+        <li>
           <NuxtLink to="/projects" class="link">Projects</NuxtLink>
         </li>
       </ul>

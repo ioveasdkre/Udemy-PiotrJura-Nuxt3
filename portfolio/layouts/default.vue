@@ -22,7 +22,7 @@
 <script lang="ts" setup>
 const colorMode = useColorMode();
 console.log(colorMode.preference);
-colorMode.preference = 'light';
+// colorMode.preference = 'light';
 
 useHead({
   // as a string,
