@@ -18,8 +18,20 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/content', // TODO: Markdown，JSON，YAML，CSV 檔案轉成 MongoDB 形式的 API
   ],
-
-  //
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          // 官方預設主題顏色 vscode 套件 shiki
+          theme: {
+            default: 'min-light',
+            dark: 'min-dark',
+          },
+          langs: ['javascript', 'vue', 'html', 'css', 'typescript'],
+        },
+      },
+    },
+  },
   colorMode: {
     classSuffix: '',
   },

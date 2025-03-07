@@ -14,6 +14,12 @@
         <li>
           <NuxtLink to="/projects" class="link">Projects</NuxtLink>
         </li>
+        <li>
+          <NuxtLink to="/blog-ch07" class="link">Blog Ch07</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/blog" class="link">Blog</NuxtLink>
+        </li>
       </ul>
     </nav>
   </div>
