@@ -8,7 +8,12 @@
 
 <script lang="ts" setup>
 interface BlogPost {
+  title?: string;
   description?: string;
+  keywords?: string;
+  robots?: string;
+  author?: string;
+  ogTitle?: string;
   ogImage?: string;
 }
 
@@ -23,7 +28,12 @@ const { data: blogData } = await useAsyncData<BlogPost>(dataPath, () =>
 
 // TODO: 設置 SEO
 useSeoMeta({
+  title: blogData.value?.title || 'Default Title',
   description: blogData.value?.description || 'Default Description',
+  keywords: blogData.value?.keywords || 'Default Keywords',
+  robots: blogData.value?.robots || 'Default Robots',
+  author: blogData.value?.author || 'Default Author',
+  ogTitle: blogData.value?.ogTitle || 'Default OpenGraph Title',
   ogImage: blogData.value?.ogImage || 'Default OpenGraph Image',
 });
 </script>
