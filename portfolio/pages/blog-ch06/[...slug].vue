@@ -19,8 +19,9 @@ const slug = route.params.slug;
 const dataPath = route.path;
 const path = `/blog-ch06/${slug}`;
 
-const { data: blogData } = await useAsyncData<BlogPost>(dataPath, () =>
-  queryCollection('docs').path(path).first(),
+// 建議改在 content.config.ts 設定資料模型
+const { data: blogData } = await useAsyncData<BlogPost>(blog, () =>
+  queryCollection('content').path(path).first(),
 );
 
 // TODO: 設置 SEO

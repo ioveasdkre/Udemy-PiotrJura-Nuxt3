@@ -9,7 +9,7 @@
 const path = `/about-ch06`;
 
 const { data: aboutData } = await useAsyncData('about', () =>
-  queryCollection('docs').path(path).first(),
+  queryCollection('content').path(path).first(),
 );
 
 // TODO: 設置 SEO

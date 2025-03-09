@@ -1,9 +1,9 @@
 ---
-description: 'List of all my recent blog - ch07'
+description: 'List of all my recent blog posts'
 ---
 
-# Blog - Ch07
+# Blog Posts
 
 This is the list of my recent blog posts
 
-::blog-ch07
+::BlogCh07

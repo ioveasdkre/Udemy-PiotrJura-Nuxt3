@@ -11,7 +11,7 @@ const dataPath = route.path;
 const path = `/about-ch06`;
 
 const { data: aboutData } = await useAsyncData(dataPath, () =>
-  queryCollection('docs').path(path).first(),
+  queryCollection('content').path(path).first(),
 );
 
 // TODO: 設置 SEO
