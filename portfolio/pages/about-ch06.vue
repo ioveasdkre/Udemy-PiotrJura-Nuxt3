@@ -6,11 +6,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-const route = useRoute();
-const dataPath = route.path;
 const path = `/about-ch06`;
 
-const { data: aboutData } = await useAsyncData(dataPath, () =>
+const { data: aboutData } = await useAsyncData('about', () =>
   queryCollection('docs').path(path).first(),
 );
 
