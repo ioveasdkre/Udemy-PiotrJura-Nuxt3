@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BlogCh07 />
+    <BlogCh08 />
   </div>
 </template>
 <script setup lang="ts"></script>

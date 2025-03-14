@@ -20,6 +20,9 @@
         <li>
           <NuxtLink to="/projects-ch07" class="link">Projects Ch07</NuxtLink>
         </li>
+        <li>
+          <NuxtLink to="/blog-ch08" class="link">Blog Ch08</NuxtLink>
+        </li>
       </ul>
     </nav>
   </div>

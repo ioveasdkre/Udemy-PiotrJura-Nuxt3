@@ -4,7 +4,7 @@ description: 'meta description of the page'
 keywords: 'nuxt, vue, content'
 robots: 'index, follow'
 author: 'NuxtLabs'
-og:title: 'This is an OpenGraph title'
+'og:title': 'This is an OpenGraph title'
 ---
 
 # First post on our website

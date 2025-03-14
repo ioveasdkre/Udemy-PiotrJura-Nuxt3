@@ -35,9 +35,9 @@ interface BlogCollectionItemWithDisplayYear extends BlogCollectionItem {
   displayYear?: boolean;
 }
 
-const { data } = await useAsyncData<BlogCollectionItemWithDisplayYear[]>('blog-ch07-list', () =>
-  queryCollection('blog07')
-    .where('path', 'LIKE', '/blog-ch07/%') // 過濾 `/blog-ch07` 內的內容
+const { data } = await useAsyncData<BlogCollectionItemWithDisplayYear[]>('blog-ch08-list', () =>
+  queryCollection('blog08')
+    .where('path', 'LIKE', '/blog-ch08/%') // 過濾 `/blog-ch08` 內的內容
     .select('path', 'title', 'publishedAt', 'year') // 指定返回的欄位
     .order('publishedAt', 'ASC') // 依照 `publishedAt` 欄位排序
     .all(),
