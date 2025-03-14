@@ -8,10 +8,13 @@
 interface BlogPost {
   title?: string;
   description?: string;
-  keywords?: string;
-  robots?: string;
-  author?: string;
-  ogTitle?: string;
+  meta: {
+    keywords?: string;
+    robots?: string;
+    author?: string;
+    'og:title'?: string;
+    toc?: boolean;
+  };
 }
 
 const route = useRoute();
@@ -28,9 +31,9 @@ const { data: blogData } = await useAsyncData<BlogPost>(dataPath, () =>
 useSeoMeta({
   title: blogData.value?.title || 'Default Title',
   description: blogData.value?.description || 'Default Description',
-  keywords: blogData.value?.keywords || 'Default Keywords',
-  robots: blogData.value?.robots || 'Default Robots',
-  author: blogData.value?.author || 'Default Author',
-  ogTitle: blogData.value?.ogTitle || 'Default OpenGraph Title',
+  keywords: blogData.value?.meta.keywords || 'Default Keywords',
+  robots: blogData.value?.meta.robots || 'Default Robots',
+  author: blogData.value?.meta.author || 'Default Author',
+  ogTitle: blogData.value?.meta['og:title'] || 'Default OpenGraph Title',
 });
 </script>
