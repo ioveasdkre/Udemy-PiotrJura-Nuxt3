@@ -8,11 +8,9 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-
   future: {
     compatibilityVersion: 4,
   },
-
   modules: [
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
@@ -34,5 +32,11 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: '',
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
   },
 });

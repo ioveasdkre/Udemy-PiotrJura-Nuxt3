@@ -13,7 +13,7 @@ const layout = 'another';
 
 <template>
   <div>
-    <NuxtRouteAnnouncer />
     <NuxtLayout><NuxtPage /></NuxtLayout>
+    <NuxtRouteAnnouncer />
   </div>
 </template>
