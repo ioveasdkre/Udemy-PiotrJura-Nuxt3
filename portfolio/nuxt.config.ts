@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: {
     enabled: true,
-
     timeline: {
       enabled: true,
     },
@@ -16,6 +15,9 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/content', // TODO: Markdown，JSON，YAML，CSV 檔案轉成 MongoDB 形式的 API
   ],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
   content: {
     build: {
       markdown: {

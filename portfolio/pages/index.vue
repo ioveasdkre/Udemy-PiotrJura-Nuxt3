@@ -1,5 +1,7 @@
 <template>
-  <div>Hello from the main page!</div>
+  <article class="prose dark:prose-invert max-w-none">
+    <ContentRenderer v-if="content" :value="content" />
+  </article>
 </template>
 
 <script lang="ts" setup>
@@ -28,6 +30,15 @@ useHead({
     },
   ],
 });
+
+const route = useRoute();
+const dataPath = route.path;
+const path = `/`;
+
+const { data } = await useAsyncData(dataPath, () => queryCollection('content').path(path).first());
+
+// 避免 Hydration 錯誤
+const content = computed(() => data.value || null);
 </script>
 
 <style></style>
