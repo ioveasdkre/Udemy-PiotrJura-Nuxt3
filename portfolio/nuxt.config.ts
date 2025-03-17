@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     '@nuxt/content', // TODO: Markdown，JSON，YAML，CSV 檔案轉成 MongoDB 形式的 API
   ],
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' },
+    pageTransition: { name: 'page', mode: 'out-in' }, // 頁面之間過度效果
   },
   content: {
     build: {

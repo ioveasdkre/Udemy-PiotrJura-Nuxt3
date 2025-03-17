@@ -26,6 +26,9 @@
         <li>
           <NuxtLink to="/blog-ch09" class="link">Blog Ch09</NuxtLink>
         </li>
+        <li>
+          <NuxtLink to="/blog-ch10" class="link">Blog Ch10</NuxtLink>
+        </li>
       </ul>
     </nav>
   </div>
@@ -35,6 +38,6 @@
 
 <style scoped>
 .link {
-  @apply p-1 hover:bg-gray-200;
+  @apply p-1 hover:bg-gray-200 dark:hover:bg-gray-800;
 }
 </style>

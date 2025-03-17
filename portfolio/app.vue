@@ -19,10 +19,11 @@ const layout = 'another';
 </template>
 
 <style>
+/* 頁面之間過度效果 */
 /* 第一個名稱對應 nuxt.config.ts 中的 pageTransition 名稱 */
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.4s;
+  transition: all 0.1s;
 }
 .page-enter-from,
 .page-leave-to {
