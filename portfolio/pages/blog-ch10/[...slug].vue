@@ -6,12 +6,12 @@
     <div v-if="blogData">
       <div class="grid grid-cols-6 gap-16 w-full">
         <!-- 內容區域 -->
-        <div :class="[blogData.meta.toc ? 'col-span-4' : 'col-span-6']">
+        <div :class="[blogData.meta.toc ? 'col-span-6 md:col-span-4' : 'col-span-6']">
           <ContentRenderer :value="blogData" />
         </div>
 
         <!-- 目錄區域 -->
-        <div class="col-span-2 not-prose" v-if="blogData.body?.toc">
+        <div class="hidden md:col-span-2 md:block not-prose" v-if="blogData.body?.toc">
           <aside class="sticky top-8">
             <div class="font-semibold mb-2">Table of Contents</div>
             <nav>

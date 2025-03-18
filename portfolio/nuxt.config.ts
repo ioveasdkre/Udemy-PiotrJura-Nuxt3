@@ -11,9 +11,11 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   modules: [
+    '@nuxtjs/sitemap',
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
-    '@nuxt/content', // TODO: Markdown，JSON，YAML，CSV 檔案轉成 MongoDB 形式的 API
+    // TODO: Markdown，JSON，YAML，CSV 檔案轉成 MongoDB 形式的 API
+    '@nuxt/content',
   ],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }, // 頁面之間過度效果
@@ -40,5 +42,14 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  // sitemap設定
+  routeRules: {
+    // 1️⃣ 這個頁面會在 build 時預渲染，適合 SEO
+    '/': { prerender: true },
+  },
+  // sitemap設定
+  site: {
+    url: 'http://localhost:3000', // 替換為您的實際網站 URL
   },
 });
